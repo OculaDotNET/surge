@@ -63,15 +63,15 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 0 20px;
+            padding: 0 15px; /* Adjusted padding */
             color: white;
-            font-size: 24px;
-            font-weight: normal;
+            font-size: 20px; /* Reduced font size */
             box-sizing: border-box;
+            box-shadow: none; /* Ensure no shadow */
         }
 
         .glass-bar .text {
-            font-size: 24px;
+            font-size: 20px; /* Adjusted font size */
         }
 
         .glass-bar .discord-button {
@@ -80,12 +80,13 @@
             border: none;
             border-radius: 5px;
             padding: 8px 15px;
-            font-size: 16px;
+            font-size: 14px; /* Reduced font size */
             cursor: pointer;
             text-decoration: none;
             font-weight: bold;
             box-shadow: none;
             white-space: nowrap;
+            margin: 0; /* Ensure no extra margin */
         }
 
         .glass-bar .discord-button:hover {
@@ -97,35 +98,43 @@
             bottom: 10px;
             width: 100%;
             text-align: center;
-            font-size: 10px; /* Adjusted font size for better readability on mobile */
+            font-size: 10px; /* Adjusted font size */
             color: white;
-            padding: 0 10px; /* Added padding to prevent text from touching the edges */
+            padding: 0 10px; /* Padding to ensure text doesn't touch the edges */
+            box-sizing: border-box;
         }
 
         /* Mobile Styles */
         @media (max-width: 600px) {
             .regular-text {
-                font-size: 36px; /* Adjust font size for smaller screens */
+                font-size: 32px; /* Further reduced font size */
             }
 
             .small-text {
-                font-size: 14px; /* Adjust font size for smaller screens */
+                font-size: 14px; /* Adjusted font size */
             }
 
             .glass-bar {
-                height: 50px; /* Adjust height for smaller screens */
-                padding: 0 10px; /* Adjust padding for smaller screens */
-                font-size: 18px; /* Adjust font size for smaller screens */
+                height: 50px; /* Reduced height */
+                padding: 0 10px; /* Adjusted padding */
+                font-size: 18px; /* Adjusted font size */
+                flex-direction: column; /* Stacked content vertically */
+                justify-content: center;
+            }
+
+            .glass-bar .text {
+                font-size: 18px; /* Adjusted font size */
+                margin-bottom: 5px; /* Space between text and button */
             }
 
             .glass-bar .discord-button {
-                padding: 6px 12px; /* Adjust padding for smaller screens */
-                font-size: 14px; /* Adjust font size for smaller screens */
+                padding: 6px 12px; /* Adjusted padding */
+                font-size: 14px; /* Adjusted font size */
             }
 
             .footnote {
-                font-size: 8px; /* Adjust font size for very small screens */
-                padding: 0 5px; /* Adjust padding for very small screens */
+                font-size: 8px; /* Further reduced font size */
+                padding: 0 5px; /* Adjusted padding */
             }
         }
     </style>
