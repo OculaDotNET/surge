@@ -30,10 +30,8 @@
             pointer-events: none;
             will-change: transform;
             transition: transform 0.2s ease-out;
-            /* Adjust opacity or add filter */
-            opacity: 0.8; /* Change this value to increase/decrease brightness */
-            /* Alternatively, you can use the filter property to adjust brightness */
-            /* filter: brightness(1.5); */ /* Uncomment this line to use filter instead */
+            opacity: 0.8; /* Adjust opacity for brightness */
+            /* filter: brightness(1.5); */ /* Uncomment for filter option */
         }
 
         .container {
@@ -52,10 +50,29 @@
             color: white;
             margin-top: 10px;
         }
+
+        .glass-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80px; /* Adjust height as needed */
+            background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+            backdrop-filter: blur(10px); /* Frosted glass effect */
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Optional border */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: normal;
+            text-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Optional text shadow for better readability */
+        }
     </style>
 </head>
 <body>
     <div id="stars"></div>
+    <div class="glass-bar">Glassmorphism Bar</div>
     <div class="container">
         <div class="regular-text">surge.lol</div>
         <div class="small-text">made by sillyocula</div>
