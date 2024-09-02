@@ -61,17 +61,41 @@
             backdrop-filter: blur(10px);
             display: flex;
             align-items: center;
-            justify-content: left;
+            justify-content: space-between; /* Distribute items between left and right */
+            padding: 0 20px; /* Padding on left and right */
             color: white;
             font-size: 24px;
             font-weight: normal;
             text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
         }
+
+        .glass-bar .text {
+            font-size: 24px;
+        }
+
+        .glass-bar .discord-button {
+            background-color: #7289da; /* Discord blue color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .glass-bar .discord-button:hover {
+            background-color: #5b6eae; /* Darker shade on hover */
+        }
     </style>
 </head>
 <body>
     <div id="stars"></div>
-    <div class="glass-bar">    surge</div>
+    <div class="glass-bar">
+        <div class="text">surge</div>
+        <a href="https://discord.gg/your-server-link" class="discord-button" target="_blank">Join Discord</a>
+    </div>
     <div class="container">
         <div class="regular-text">surge.lol</div>
         <div class="small-text">made by sillyocula</div>
