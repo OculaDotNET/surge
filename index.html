@@ -38,22 +38,23 @@
             text-align: center;
         }
 
-        .text {
+        .outlined-text {
             position: relative;
-            font-size: 48px;
             color: transparent;
+            font-size: 48px;
             text-shadow:
                 1px 1px 0 #fff,
                 -1px -1px 0 #fff,
                 1px -1px 0 #fff,
                 -1px 1px 0 #fff;
+            z-index: 1;
         }
 
         .regular-text {
             position: relative;
-            z-index: 1;
             font-size: 48px;
             color: white;
+            z-index: 2;
         }
 
         .small-text {
@@ -66,7 +67,7 @@
 <body>
     <div id="stars"></div>
     <div class="container">
-        <div class="text">surge.lol</div>
+        <div class="outlined-text">surge.lol</div>
         <div class="regular-text">surge.lol</div>
         <div class="small-text">made by sillyocula</div>
     </div>
