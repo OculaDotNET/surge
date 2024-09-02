@@ -19,26 +19,23 @@
             font-style: italic;
             font-weight: bold;
             font-size: 48px;
+            cursor: none;
         }
 
         #stars {
             position: absolute;
-            width: 2000px;
-            height: 2000px;
+            width: 150%;
+            height: 150%;
             background: url('https://www.transparenttextures.com/patterns/stardust.png');
             background-size: contain;
             pointer-events: none;
             will-change: transform;
+            transition: transform 0.2s ease-out;
         }
 
         .text {
             position: relative;
             z-index: 2;
-        }
-
-        @keyframes moveStars {
-            from { transform: translate(0, 0); }
-            to { transform: translate(-100px, -100px); }
         }
     </style>
 </head>
@@ -51,8 +48,8 @@
             const stars = document.getElementById('stars');
             const mouseX = e.clientX / window.innerWidth;
             const mouseY = e.clientY / window.innerHeight;
-            const moveX = (mouseX - 0.5) * 100;
-            const moveY = (mouseY - 0.5) * 100;
+            const moveX = (mouseX - 0.5) * 30;
+            const moveY = (mouseY - 0.5) * 30;
             stars.style.transform = `translate(${moveX}px, ${moveY}px)`;
         });
     </script>
