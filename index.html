@@ -3,38 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Text with Gradient Background</title>
+    <title>Text with Moving Stars Background</title>
     <style>
         body, html {
             margin: 0;
             padding: 0;
             height: 100%;
+            overflow: hidden;
+            background-color: black;
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden;
-            background: linear-gradient(90deg, #f3e7e9, #e3eeff, #f3e7e9, #e3eeff);
-            background-size: 200% 200%;
-            animation: gradientMove 10s ease infinite;
-        }
-
-        @keyframes gradientMove {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        .text {
+            color: white;
             font-family: Arial, sans-serif;
             font-style: italic;
             font-weight: bold;
             font-size: 48px;
-            color: white;
-            text-align: center;
+        }
+
+        #stars {
+            position: absolute;
+            width: 2000px;
+            height: 2000px;
+            background: url('https://www.transparenttextures.com/patterns/stardust.png');
+            background-size: contain;
+            pointer-events: none;
+            will-change: transform;
+        }
+
+        .text {
+            position: relative;
+            z-index: 2;
+        }
+
+        @keyframes moveStars {
+            from { transform: translate(0, 0); }
+            to { transform: translate(-100px, -100px); }
         }
     </style>
 </head>
 <body>
+    <div id="stars"></div>
     <div class="text">Your Text Here</div>
+
+    <script>
+        document.addEventListener('mousemove', function(e) {
+            const stars = document.getElementById('stars');
+            const mouseX = e.clientX / window.innerWidth;
+            const mouseY = e.clientY / window.innerHeight;
+            const moveX = (mouseX - 0.5) * 100;
+            const moveY = (mouseY - 0.5) * 100;
+            stars.style.transform = `translate(${moveX}px, ${moveY}px)`;
+        });
+    </script>
 </body>
 </html>
