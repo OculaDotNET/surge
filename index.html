@@ -12,6 +12,7 @@
             overflow: hidden;
             background-color: black;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             color: white;
@@ -38,7 +39,6 @@
         .container {
             position: relative;
             z-index: 2;
-            text-align: center;
         }
 
         .regular-text {
@@ -63,15 +63,15 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 0 15px; /* Adjusted padding */
+            padding: 0 15px;
             color: white;
-            font-size: 20px; /* Reduced font size */
+            font-size: 20px;
             box-sizing: border-box;
-            box-shadow: none; /* Ensure no shadow */
+            box-shadow: none;
         }
 
         .glass-bar .text {
-            font-size: 20px; /* Adjusted font size */
+            font-size: 20px;
         }
 
         .glass-bar .discord-button {
@@ -80,13 +80,13 @@
             border: none;
             border-radius: 5px;
             padding: 8px 15px;
-            font-size: 14px; /* Reduced font size */
+            font-size: 14px;
             cursor: pointer;
             text-decoration: none;
             font-weight: bold;
             box-shadow: none;
             white-space: nowrap;
-            margin: 0; /* Ensure no extra margin */
+            margin: 0;
         }
 
         .glass-bar .discord-button:hover {
@@ -98,16 +98,22 @@
             bottom: 10px;
             width: 100%;
             text-align: center;
-            font-size: 10px; /* Adjusted font size */
+            font-size: 10px;
             color: white;
-            padding: 0 10px; /* Padding to ensure text doesn't touch the edges */
+            padding: 0 10px;
             box-sizing: border-box;
         }
 
         /* Mobile Styles */
         @media (max-width: 600px) {
+            body, html {
+                font-size: 16px; /* Adjust font size for mobile */
+                text-align: center;
+                padding: 0;
+            }
+
             .regular-text {
-                font-size: 32px; /* Further reduced font size */
+                font-size: 32px; /* Adjusted font size */
             }
 
             .small-text {
@@ -118,7 +124,7 @@
                 height: 50px; /* Reduced height */
                 padding: 0 10px; /* Adjusted padding */
                 font-size: 18px; /* Adjusted font size */
-                flex-direction: column; /* Stacked content vertically */
+                flex-direction: column; /* Stack content vertically */
                 justify-content: center;
             }
 
