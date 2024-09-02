@@ -62,11 +62,11 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 0 20px; /* Adjusted padding to fit the content within the bar */
+            padding: 0 20px;
             color: white;
             font-size: 24px;
             font-weight: normal;
-            box-sizing: border-box; /* Ensure padding is included in width */
+            box-sizing: border-box;
         }
 
         .glass-bar .text {
@@ -78,17 +78,26 @@
             color: white;
             border: none;
             border-radius: 5px;
-            padding: 8px 15px; /* Adjust padding to fit within the bar */
+            padding: 8px 15px;
             font-size: 16px;
             cursor: pointer;
             text-decoration: none;
             font-weight: bold;
-            box-shadow: none; /* Remove shadow */
-            white-space: nowrap; /* Prevent text from wrapping */
+            box-shadow: none;
+            white-space: nowrap;
         }
 
         .glass-bar .discord-button:hover {
             background-color: #5b6eae; /* Darker shade on hover */
+        }
+
+        .footnote {
+            position: absolute;
+            bottom: 10px; /* Adjust the distance from the bottom */
+            width: 100%;
+            text-align: center;
+            font-size: 14px; /* Smaller font size for the footnote */
+            color: white;
         }
     </style>
 </head>
@@ -101,6 +110,9 @@
     <div class="container">
         <div class="regular-text">surge.lol</div>
         <div class="small-text">made by sillyocula</div>
+    </div>
+    <div class="footnote">
+        This is your footnote text.
     </div>
 
     <script>
