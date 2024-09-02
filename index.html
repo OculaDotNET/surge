@@ -19,6 +19,7 @@
             font-style: italic;
             font-weight: bold;
             font-size: 48px;
+            text-align: center;
         }
 
         #stars {
@@ -96,8 +97,36 @@
             bottom: 10px;
             width: 100%;
             text-align: center;
-            font-size: 8px;
+            font-size: 10px; /* Adjusted font size for better readability on mobile */
             color: white;
+            padding: 0 10px; /* Added padding to prevent text from touching the edges */
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 600px) {
+            .regular-text {
+                font-size: 36px; /* Adjust font size for smaller screens */
+            }
+
+            .small-text {
+                font-size: 14px; /* Adjust font size for smaller screens */
+            }
+
+            .glass-bar {
+                height: 50px; /* Adjust height for smaller screens */
+                padding: 0 10px; /* Adjust padding for smaller screens */
+                font-size: 18px; /* Adjust font size for smaller screens */
+            }
+
+            .glass-bar .discord-button {
+                padding: 6px 12px; /* Adjust padding for smaller screens */
+                font-size: 14px; /* Adjust font size for smaller screens */
+            }
+
+            .footnote {
+                font-size: 8px; /* Adjust font size for very small screens */
+                padding: 0 5px; /* Adjust padding for very small screens */
+            }
         }
     </style>
 </head>
