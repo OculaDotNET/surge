@@ -61,11 +61,12 @@
             backdrop-filter: blur(10px);
             display: flex;
             align-items: center;
-            justify-content: space-between; /* Distribute items between left and right */
-            padding: 0 10px; /* Adjust padding to fit button within screen */
+            justify-content: space-between;
+            padding: 0 20px; /* Adjusted padding to fit the content within the bar */
             color: white;
             font-size: 24px;
             font-weight: normal;
+            box-sizing: border-box; /* Ensure padding is included in width */
         }
 
         .glass-bar .text {
@@ -83,6 +84,7 @@
             text-decoration: none;
             font-weight: bold;
             box-shadow: none; /* Remove shadow */
+            white-space: nowrap; /* Prevent text from wrapping */
         }
 
         .glass-bar .discord-button:hover {
