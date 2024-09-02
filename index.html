@@ -29,16 +29,30 @@
             font-weight: bold;
             color: white;
             text-align: center;
-            animation: flicker 1.5s infinite alternate;
+        }
+
+        .flicker-text span {
+            animation: flicker 0.2s infinite alternate;
         }
 
         @keyframes flicker {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.1; }
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .flicker-text span:nth-child(odd) {
+            animation-duration: 0.1s;
+        }
+
+        .flicker-text span:nth-child(even) {
+            animation-duration: 0.3s;
         }
     </style>
 </head>
 <body>
-    <div class="flicker-text">Flickering Text</div>
+    <div class="flicker-text">
+        <span>F</span><span>l</span><span>i</span><span>c</span><span>k</span><span>e</span><span>r</span><span>i</span><span>n</span><span>g</span> 
+        <span>T</span><span>e</span><span>x</span><span>t</span>
+    </div>
 </body>
 </html>
