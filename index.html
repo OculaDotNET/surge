@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flickering Text with Gradient Background</title>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Text with Gradient Background</title>
     <style>
         body, html {
             margin: 0;
@@ -14,9 +13,9 @@
             justify-content: center;
             align-items: center;
             overflow: hidden;
-            background: linear-gradient(-45deg, #4b0082, #00008b, #4b0082, #00008b);
+            background: linear-gradient(135deg, #d299c2, #fef9d7, #c4e0e5);
             background-size: 400% 400%;
-            animation: gradientMove 10s ease infinite;
+            animation: gradientMove 15s ease infinite;
         }
 
         @keyframes gradientMove {
@@ -25,35 +24,17 @@
             100% { background-position: 0% 50%; }
         }
 
-        .flicker-text {
-            font-family: 'Press Start 2P', cursive;
-            font-size: 36px;
+        .text {
+            font-family: Arial, sans-serif;
+            font-style: italic;
+            font-weight: bold;
+            font-size: 48px;
             color: white;
             text-align: center;
-            text-transform: uppercase;
-        }
-
-        .flicker-text span {
-            animation: flicker 2s infinite alternate;
-        }
-
-        @keyframes flicker {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-
-        .flicker-text span:nth-child(odd) {
-            animation-duration: 1.5s;
-        }
-
-        .flicker-text span:nth-child(even) {
-            animation-duration: 3s;
         }
     </style>
 </head>
 <body>
-    <div class="flicker-text">
-        <span>S</span><span>u</span><span>r</span><span>g</span><span>e</span><span>.</span><span>l</span><span>o</span><span>l</span>
-    </div>
+    <div class="text">Your Text Here</div>
 </body>
 </html>
