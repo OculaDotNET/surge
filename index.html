@@ -30,6 +30,10 @@
             pointer-events: none;
             will-change: transform;
             transition: transform 0.2s ease-out;
+            /* Adjust opacity or add filter */
+            opacity: 0.8; /* Change this value to increase/decrease brightness */
+            /* Alternatively, you can use the filter property to adjust brightness */
+            /* filter: brightness(1.5); */ /* Uncomment this line to use filter instead */
         }
 
         .container {
@@ -38,23 +42,9 @@
             text-align: center;
         }
 
-        .outlined-text {
-            position: relative;
-            color: transparent;
-            font-size: 48px;
-            text-shadow:
-                1px 1px 0 #fff,
-                -1px -1px 0 #fff,
-                1px -1px 0 #fff,
-                -1px 1px 0 #fff;
-            z-index: 1;
-        }
-
         .regular-text {
-            position: relative;
             font-size: 48px;
             color: white;
-            z-index: 2;
         }
 
         .small-text {
@@ -67,7 +57,6 @@
 <body>
     <div id="stars"></div>
     <div class="container">
-        <div class="outlined-text">surge.lol</div>
         <div class="regular-text">surge.lol</div>
         <div class="small-text">made by sillyocula</div>
     </div>
