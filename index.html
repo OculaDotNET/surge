@@ -3,9 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Surge.lol</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>surge.lol</title>
     <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family: Arial, sans-serif;
+            font-style: italic;
+            font-weight: bold;
+            font-size: 48px;
+            text-align: center;
+        }
+
+        #stars {
+            position: absolute;
+            width: 150%;
+            height: 150%;
+            background: url('https://www.transparenttextures.com/patterns/stardust.png');
+            background-size: contain;
+            pointer-events: none;
+            will-change: transform;
+            transition: transform 0.2s ease-out;
+            opacity: 0.8;
+            filter: brightness(5.5);
+        }
+
         .container {
             position: relative;
             z-index: 2;
@@ -74,25 +104,6 @@
             box-sizing: border-box;
         }
 
-        /* Download Button Styles */
-        .download-button {
-            background-color: #4CAF50; /* Green */
-            color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            text-decoration: none;
-            font-weight: bold;
-            display: inline-block;
-            margin-top: 20px;
-        }
-
-        .download-button:hover {
-            background-color: #45a049;
-        }
-
         /* Mobile Styles */
         @media (max-width: 600px) {
             body, html {
@@ -143,7 +154,6 @@
     <div class="container">
         <div class="regular-text">surge.lol</div>
         <div class="small-text">made by sillyocula</div>
-        <a href="path/to/your/file.zip" class="download-button" download>Download Now</a> <!-- Add the download button -->
     </div>
     <div class="footnote">
         This product is not affiliated with Gorilla Tag or Another Axiom LLC and is not endorsed or otherwise sponsored by Another Axiom LLC. Portions of the materials contained herein are property of Another Axiom LLC. © 2021 Another Axiom LLC.
