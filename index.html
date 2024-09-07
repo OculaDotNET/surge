@@ -105,9 +105,11 @@
 
         .glass-bar {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            max-width: 900px;
             height: 60px;
             background: rgba(30, 30, 30, 0.3);
             backdrop-filter: blur(10px);
@@ -118,8 +120,11 @@
             color: white;
             font-size: 24px;
             font-weight: normal;
+            border-radius: 50px;
             box-sizing: border-box;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
+
 
         .glass-bar .text {
             font-size: 24px;
