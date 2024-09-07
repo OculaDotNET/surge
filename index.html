@@ -85,6 +85,21 @@
             font-weight: bold;
         }
 
+        .glass-panel {
+            position: relative;
+            z-index: 1;
+            width: 90%;
+            max-width: 1000px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            margin: 20px;
+            color: white;
+        }
+        
         .download-button:hover {
             background-color: #71368a;
         }
@@ -145,30 +160,35 @@
         <div class="text">surge</div>
         <a href="https://discord.gg/putdaserverhere" class="discord-button" target="_blank">Join Discord</a>
     </div>
-    <div class="container">
-        <div class="regular-text">surge.lol</div>
-        <div class="small-text">made by sillyocula</div>
-        
-        <!-- Divider -->
-        <div class="divider"></div>
-        
-        <!-- Download Section -->
-        <div class="download-section">
-            <div class="download-title">Surge Custom Launcher</div>
-            <div class="download-description">The first ever custom Gorilla Tag launcher!<br>
-                Instead of downloading a dll, you can use our launcher.<br>
-                Launch the game from the launcher, and you will have the latest update of our menu, without the need to manually use a dll<br>
-                THIS PROGRAM REQUIRES <a href="https://dotnet.microsoft.com/en-us/download/dotnet-framework/net472" target="_blank">.NET 4.7.2 RUNTIME</a> TO RUN.
-            </div>
-            <a href="https://stupid menu download" class="download-button" target="_blank">Download Now</a>
+    
+    <div class="glass-panel">
+        <div class="container">
+            <div class="regular-text">surge.lol</div>
+            <div class="small-text">made by sillyocula</div>
 
-            <a href="https://how-to-use-link" class="download-button" target="_blank" style="margin-top: 10px;">How to Use</a>
+            <!-- Divider -->
+            <div class="divider"></div>
+
+            <!-- Download Section -->
+            <div class="download-section">
+                <div class="download-title">Surge Custom Launcher</div>
+                <div class="download-description">
+                    The first ever custom Gorilla Tag launcher!<br>
+                    Instead of downloading a dll, you can use our launcher.<br>
+                    Launch the game from the launcher, and you will have the latest update of our menu, without the need to manually use a dll<br>
+                    THIS PROGRAM REQUIRES 
+                    <a href="https://dotnet.microsoft.com/en-us/download/dotnet-framework/net472" target="_blank">.NET 4.7.2 RUNTIME</a> TO RUN.
+                </div>
+                <a href="https://stupid menu download" class="download-button" target="_blank">Download Now</a>
+                <a href="https://how-to-use-link" class="download-button" target="_blank" style="margin-top: 10px;">How to Use</a>
+            </div>
         </div>
     </div>
+
     <div class="footnote">
         This product is not affiliated with Gorilla Tag or Another Axiom LLC and is not endorsed or otherwise sponsored by Another Axiom LLC. Portions of the materials contained herein are property of Another Axiom LLC. © 2021 Another Axiom LLC.
     </div>
-
+    
     <script>
         document.addEventListener('mousemove', function(e) {
             const stars = document.getElementById('stars');
